@@ -1,0 +1,39 @@
+<div class="container my-5">
+    <h5>Edit Contact</h5>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateContact()">
+                <div class="mb-3">
+                    <label for="id" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="id" name="id" [(ngModel)]="contactDetails.id" >
+                </div>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="contactDetails.firstName" >
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="contactDetails.lastName">
+                </div>
+                <div class="mb-3">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyName" name="companyName" [(ngModel)]="contactDetails.companyName">
+                </div>
+                <div class="mb-3">
+                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" [(ngModel)]="contactDetails.mobileNumber">
+                </div>
+                <div class="mb-3">
+                    <label for="emailAddress" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="emailAddress" name="emailAddress" [(ngModel)]="contactDetails.emailAddress">
+                </div>
+            
+                <button type="submit" class="btn btn-success btn-block mb-3">Save</button>
+            
+                <button type="submit" class="btn btn-danger btn-block mb-3" (click)="deleteContact(contactDetails.id)">Delete</button>
+            </form>
+        </div>
+    </div>
+    
+    
+</div>

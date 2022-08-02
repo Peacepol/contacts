@@ -1,0 +1,34 @@
+<div class="container my-5">
+    <h5>Add Contact</h5>
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addContact()">
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="addContactRequest.firstName" placeholder="First Name" >
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="addContactRequest.lastName" placeholder="Last Name">
+                </div>
+                <div class="mb-3">
+                    <label for="companyName" class="form-label">Company Name</label>
+                    <input type="text" class="form-control" id="companyName" name="companyName" [(ngModel)]="addContactRequest.companyName" placeholder="Company Name">
+                </div>
+                <div class="mb-3">
+                    <label for="mobileNumber" class="form-label">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" [(ngModel)]="addContactRequest.mobileNumber" placeholder="Mobile Number">
+                </div>
+                <div class="mb-3">
+                    <label for="emailAddress" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="emailAddress" name="emailAddress" [(ngModel)]="addContactRequest.emailAddress" placeholder="Email">
+                </div>
+            
+                <button type="submit" class="btn btn-primary btn-block mb-3">Save</button>
+            
+            </form>
+        </div>
+    </div>
+    
+    
+</div>
